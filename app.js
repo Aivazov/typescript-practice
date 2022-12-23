@@ -13,7 +13,7 @@ var input1 = document.getElementById('num1');
 //   console.log(add(+input1.value, +input2.value));
 // });
 //
-// ******** Exercise 2 ********
+// ******** EXERCISE 2 ********
 //
 // let fruit: string[] = [];
 // function workWithArray(arr: string[], value: string, action: 'add' | 'remove') {
@@ -42,6 +42,7 @@ var notInitialize = undefined;
 var callback = function (a) {
     return 100 + a;
 };
+//UNKNOWN
 var some;
 some = 'Text';
 var str;
@@ -51,6 +52,7 @@ if (typeof some === 'string') {
 }
 var person = ['Max', 21];
 var typescriptedPerson = ['Max', 21];
+//ENUM
 var Toggle;
 (function (Toggle) {
     Toggle[Toggle["LOADING"] = 0] = "LOADING";
@@ -65,3 +67,42 @@ if (isLoading.status === Toggle.READY) {
 else {
     console.log('The loading is ready');
 }
+//UNION
+var doubleTypedEl; //union Type
+doubleTypedEl = 'Hey';
+doubleTypedEl = 10;
+//LITERAL
+var literalTyped;
+// enum Toggle2 {
+//   enable,
+//   disable,
+// }
+//FUNCTIONS
+function showMessage(message) {
+    console.log(message);
+}
+function calc(num1, num2) {
+    return num1 + num2;
+}
+function customError() {
+    throw new Error('Error');
+}
+var page1 = {
+    title: 'The awesome page',
+    likes: 100,
+    accounts: ['Max', 'Anton', 'Nikita'],
+    status: 'open',
+    details: {
+        createAt: '2021-01-01',
+        updateAt: '2021-05-01'
+    }
+};
+var page2 = {
+    title: 'Python or Js',
+    likes: 5,
+    accounts: ['Alex'],
+    status: 'close'
+};
+//
+// ******** EXERCISE 3 ********
+//

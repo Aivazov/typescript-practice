@@ -15,7 +15,7 @@ const input1 = document.getElementById('num1')! as HTMLInputElement;
 // });
 
 //
-// ******** Exercise 2 ********
+// ******** EXERCISE 2 ********
 //
 
 // let fruit: string[] = [];
@@ -45,11 +45,13 @@ const input1 = document.getElementById('num1')! as HTMLInputElement;
 let age: number = 50;
 let moduleSecondName: string = 'Max';
 let toggle: boolean = true;
-let empty: unknown = null;
+let empty: null = null;
 let notInitialize: undefined = undefined;
-let callback: Function = (a: number) => {
+let callback: Function = (a: number): number => {
   return 100 + a;
 };
+
+//UNKNOWN
 
 let some: unknown;
 some = 'Text';
@@ -63,6 +65,8 @@ if (typeof some === 'string') {
 
 let person = ['Max', 21];
 let typescriptedPerson: [name: string, age: number] = ['Max', 21];
+
+//ENUM
 
 enum Toggle {
   LOADING,
@@ -78,3 +82,67 @@ if (isLoading.status === Toggle.READY) {
 } else {
   console.log('The loading is ready');
 }
+
+//UNION
+
+let doubleTypedEl: string | number; //union Type
+doubleTypedEl = 'Hey';
+doubleTypedEl = 10;
+
+//LITERAL
+
+let literalTyped: 'enable' | 'disable';
+
+// enum Toggle2 {
+//   enable,
+//   disable,
+// }
+
+//FUNCTIONS
+
+function showMessage(message: string): void {
+  console.log(message);
+}
+
+function calc(num1: number, num2: number): number {
+  return num1 + num2;
+}
+
+function customError(): never {
+  throw new Error('Error');
+}
+
+//CUSTOM TYPES
+
+type Page = {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: 'open' | 'close';
+  details?: {
+    createAt: string;
+    updateAt: string;
+  };
+};
+
+const page1: Page = {
+  title: 'The awesome page',
+  likes: 100,
+  accounts: ['Max', 'Anton', 'Nikita'],
+  status: 'open',
+  details: {
+    createAt: '2021-01-01',
+    updateAt: '2021-05-01',
+  },
+};
+
+const page2 = {
+  title: 'Python or Js',
+  likes: 5,
+  accounts: ['Alex'],
+  status: 'close',
+};
+
+//
+// ******** EXERCISE 3 ********
+//

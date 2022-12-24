@@ -1,7 +1,8 @@
-var addBtn = document.querySelector('#add');
-var removeBtn = document.querySelector('#remove');
-var list = document.querySelector('#list');
-var input1 = document.getElementById('num1');
+"use strict";
+const addBtn = document.querySelector('#add');
+const removeBtn = document.querySelector('#remove');
+const list = document.querySelector('#list');
+const input1 = document.getElementById('num1');
 // const input2 = document.getElementById('num2')! as HTMLInputElement;
 //
 // ******** Exercise 1 ********
@@ -34,45 +35,45 @@ var input1 = document.getElementById('num1');
 //   fruit.splice(index, 1);
 //   console.log(fruit);
 // });
-var age = 50;
-var moduleSecondName = 'Max';
-var toggle = true;
-var empty = null;
-var notInitialize = undefined;
-var callback = function (a) {
+let age = 50;
+let moduleSecondName = 'Max';
+let toggle = true;
+let empty = null;
+let notInitialize = undefined;
+let callback = (a) => {
     return 100 + a;
 };
 //UNKNOWN
-var some;
+let some;
 some = 'Text';
-var str;
+let str;
 if (typeof some === 'string') {
     // typeguard method
     str = some;
 }
-var person = ['Max', 21];
-var typescriptedPerson = ['Max', 21];
+let person = ['Max', 21];
+let typescriptedPerson = ['Max', 21];
 //ENUM
 var Toggle;
 (function (Toggle) {
     Toggle[Toggle["LOADING"] = 0] = "LOADING";
     Toggle[Toggle["READY"] = 1] = "READY";
 })(Toggle || (Toggle = {}));
-var isLoading = {
-    status: Toggle.LOADING
+const isLoading = {
+    status: Toggle.LOADING,
 };
 if (isLoading.status === Toggle.READY) {
     console.log('The page is loading now');
 }
 else {
-    console.log('The loading is ready');
+    console.log('The loading is already ready');
 }
 //UNION
-var doubleTypedEl; //union Type
+let doubleTypedEl; //union Type
 doubleTypedEl = 'Hey';
 doubleTypedEl = 10;
 //LITERAL
-var literalTyped;
+let literalTyped;
 // enum Toggle2 {
 //   enable,
 //   disable,
@@ -87,21 +88,21 @@ function calc(num1, num2) {
 function customError() {
     throw new Error('Error');
 }
-var page1 = {
+const page1 = {
     title: 'The awesome page',
     likes: 100,
     accounts: ['Max', 'Anton', 'Nikita'],
     status: 'open',
     details: {
         createAt: '2021-01-01',
-        updateAt: '2021-05-01'
-    }
+        updateAt: '2021-05-01',
+    },
 };
-var page2 = {
+const page2 = {
     title: 'Python or Js',
     likes: 5,
     accounts: ['Alex'],
-    status: 'close'
+    status: 'close',
 };
 //
 // ******** EXERCISE 3 ********

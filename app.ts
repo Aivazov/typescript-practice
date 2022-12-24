@@ -80,7 +80,7 @@ const isLoading = {
 if (isLoading.status === Toggle.READY) {
   console.log('The page is loading now');
 } else {
-  console.log('The loading is ready');
+  console.log('The loading is already ready');
 }
 
 //UNION

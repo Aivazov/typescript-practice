@@ -145,4 +145,36 @@ const page2 = {
 
 //
 // ******** EXERCISE 3 ********
+// npx tsc --init
+// npx tsc -w
+
 //
+// ******** EXERCISE 4 ********
+// building the house
+
+// let x: any = 231231;
+
+// function reversingStr(a: string) {
+//   let b: any = a.toString().split('').reverse().join('');
+//   console.log(b)
+// }
+
+// reversingStr(x);
+
+class Key {
+  signature: number;
+
+  constructor() {
+    this.signature = Math.random();
+  }
+
+  getSignature() {
+    return this.signature;
+  }
+}
+
+abstract class House {
+  door = false;
+
+  constructor() {}
+}
